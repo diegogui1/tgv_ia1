@@ -17,7 +17,7 @@ spec:
   templates:
   - name: mint
     steps:
-      - name: greet
+      - - name: greet
         template: greeter
 
   - name: greeter
