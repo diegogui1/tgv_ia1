@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  name: monitorintegraciones # Executable ID (max length 64 lowercase-hyphen-separated), please modify this to any value if you are not the only user of your SAP AI Core instance. Example: `first-pipeline-1234`
+  annotations:
+    scenarios.ai.sap.com/description: "Monitor de Integraciones a SAP AI Core"
+    scenarios.ai.sap.com/name: "Tutorial"
+    executables.ai.sap.com/description: "soluciones pisibles"
+    executables.ai.sap.com/name: "Monitor de Integraciones"
+  labels:
+    scenarios.ai.sap.com/id: "learning"
+    ai.sap.com/version: "1.0"
+spec:
+  # imagePullSecrets/name: 
+  #   - name: mint
+  entrypoint: mint
+  templates:
+  - name: mint
+    steps:
+      - name: greet
+        template: greeter
+
+  - name: greeter
+    container:
+      image: docker.io/python:latest
+      command:
+        - python3
+        - '-c'
+      args:
+       - |
+        print("TGV - SAP AI Core")
