@@ -1,5 +1,5 @@
 apiVersion: ai.sap.com/v1alpha1
-kind: TemplateMonitor
+kind: ServingTemplate
 metadata:
   name: server-monitor # executable ID, must be unique across your SAP AI Core instance, for example use `server-pipeline-yourname-1234`
   annotations:
