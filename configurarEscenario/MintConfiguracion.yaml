@@ -43,8 +43,4 @@ spec:
           args:
             - >
               set -e && echo "Starting" && gunicorn --chdir /app/src test:app -b 0.0.0.0:9001 # filename `test` flask variable `app`
-          env:
-            - name: STORAGE_URI # Required
-              value: "{{inputs.artifacts.housepricemodel}}" # Required reference from artifact name, see above
-            - name: greetingmessage # different name to avoid confusion
-              value: "{{inputs.parameters.greetmessage}}"
+
