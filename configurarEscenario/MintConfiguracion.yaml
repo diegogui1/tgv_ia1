@@ -12,12 +12,6 @@ metadata:
     scenarios.ai.sap.com/id: "learning-datalines"
     ai.sap.com/version: "1.0"
 spec:
-  inputs:
-    artifacts:
-      - name: housepricemodel # placeholder name, do not add `-` in value use only alphanumeric chars
-    parameters:
-      - name: greetmessage # placeholder name
-        type: string # required for every parameters
   template:
     apiVersion: "serving.kserve.io/v1beta1"
     metadata:
